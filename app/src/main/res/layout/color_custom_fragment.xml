@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/flColorCustomDlgAddRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:background="@drawable/shape_white_corner_12">
+
+            <TextView
+                android:id="@+id/tvColorCustomDlgTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:fontFamily="@font/bold"
+                android:text="@string/add_color_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_24"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@id/cvColorCustomDlgCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvColorCustomDlgTitle"
+                app:layout_constraintVertical_bias="0.695"
+                tools:layout_editor_absoluteX="16dp">
+
+                <ir.kotlin.kavehcolorpicker.KavehColorPicker
+                    android:id="@+id/kcpColorCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_132"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/dimen_2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/hue_title"
+                    android:layout_marginVertical="@dimen/dimen_10"
+                    android:textColor="@color/n8"
+                    android:textSize="@dimen/dimen_text_size_16" />
+
+                <ir.kotlin.kavehcolorpicker.KavehHueSlider
+                    android:id="@+id/khsColorCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    android:layout_marginHorizontal="@dimen/dimen_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/hue_title"
+                    android:textColor="@color/n8"
+                    android:layout_marginVertical="@dimen/dimen_10"
+                    android:textSize="@dimen/dimen_text_size_16" />
+
+                <ir.kotlin.kavehcolorpicker.KavehColorAlphaSlider
+                    android:id="@+id/kasColorCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    android:layout_marginHorizontal="@dimen/dimen_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/vColorCustomDlgDivider"
+                android:layout_width="@dimen/dimen_1"
+                android:layout_height="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvColorCustomDlgCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vColorCustomDlgDivider"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/cancel_title"
+                        android:textColor="@color/n6"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvColorCustomDlgAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vColorCustomDlgDivider">
+
+                <FrameLayout
+                    android:id="@+id/flColorCustomDlgAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/orange_primary_bold">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/add_option_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clSpinSliderRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_62"
+    android:layout_marginHorizontal="@dimen/dimen_16">
+
+    <View
+        android:id="@+id/vSpinSliderBackground"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_4"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/ivSpinSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivSpinSlider" />
+
+    <View
+        android:id="@+id/vSpinSliderProgress"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_4"
+        android:layout_marginHorizontal="@dimen/dimen_4"
+        android:background="@color/orange_primary_bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivSpinSlider"
+        app:layout_constraintEnd_toStartOf="@id/vSpinSliderProgressCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivSpinSlider"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/vSpinSliderProgressCenter"
+        android:layout_width="@dimen/dimen_1"
+        android:layout_height="@dimen/dimen_1"
+        app:layout_constraintEnd_toEndOf="@id/ivSpinSlider"
+        app:layout_constraintStart_toStartOf="@id/ivSpinSlider"
+        app:layout_constraintTop_toTopOf="@id/ivSpinSlider" />
+
+    <View
+        android:id="@+id/vSpinSliderCenter"
+        android:layout_width="@dimen/dimen_1"
+        android:layout_height="@dimen/dimen_1"
+        app:layout_constraintEnd_toEndOf="@id/ivSpinSlider"
+        app:layout_constraintStart_toStartOf="@id/ivSpinSlider"
+        app:layout_constraintTop_toTopOf="@id/ivSpinSlider" />
+
+
+    <ImageView
+        android:id="@+id/ivSpinSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_4"
+        android:src="@drawable/ic_circle_slider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/flSpinSliderBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ivSpinSlider"
+        app:layout_constraintEnd_toEndOf="@id/vSpinSliderCenter"
+
+        app:layout_constraintStart_toStartOf="@id/vSpinSliderCenter">
+
+        <TextView
+            android:id="@+id/tvSpinSliderContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Normal"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_14" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flSpinSliderLeftBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/ivSpinSlider"
+        android:background="@drawable/bg_slider_speed_left"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvSpinSliderLeftContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Slow"
+            android:paddingHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_14" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flSpinSliderRightBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/ivSpinSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/bg_slider_speed_right">
+
+        <TextView
+            android:id="@+id/tvSpinSliderRightContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="Fast"
+            android:paddingHorizontal="@dimen/dimen_4"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_14" />
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

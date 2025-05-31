@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHomeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_primary_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="60dp">
+
+        <ImageView
+            android:id="@+id/ivRouletteClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_4"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/tvRouletteTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRouletteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:fontFamily="@font/bold"
+            android:paddingTop="@dimen/dimen_20"
+            android:text="@string/roulette_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_22"
+            android:paddingBottom="@dimen/dimen_4"
+            app:layout_constraintBottom_toTopOf="@id/vHomeSpace"
+            app:layout_constraintStart_toEndOf="@+id/ivRouletteClose"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vHomeSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_34"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vRouletteDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginBottom="@dimen/dimen_14"
+        app:layout_constraintBottom_toBottomOf="@id/clHomeHeader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_bg_n10_top_corner_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vRouletteDivider">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRoulette"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_16"
+            app:layout_constraintBottom_toTopOf="@id/tvRouletteAdd"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRouletteAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_22"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:background="@drawable/shape_gradient_orange_primary_corner_12"
+            android:fontFamily="@font/bold"
+            android:paddingVertical="@dimen/dimen_14"
+            android:text="@string/roulette_add_title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_16"
+            app:layout_constraintBottom_toTopOf="@+id/rlRouletteAdmob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/rlRouletteAdmob"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:background="@color/white">
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

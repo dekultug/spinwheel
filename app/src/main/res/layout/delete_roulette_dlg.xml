@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/flDeleteRouletteRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/dark_transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:background="@drawable/shape_white_corner_12">
+
+            <TextView
+                android:id="@+id/tvDeleteRouletteDlgTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:fontFamily="@font/bold"
+                android:text="@string/remove_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDeleteRouletteDlgNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:fontFamily="@font/regular"
+                android:textAlignment="center"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_16"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:layout_constraintBottom_toTopOf="@+id/cvDeleteRouletteDlgCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeleteRouletteDlgTitle"
+                tools:text="Are you sure you want to delete\nWhat are you eating today?" />
+
+            <View
+                android:id="@+id/vDeleteRouletteDlgDivider"
+                android:layout_width="@dimen/dimen_1"
+                android:layout_height="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDeleteRouletteDlgCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vDeleteRouletteDlgDivider"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/cancel_title"
+                        android:textColor="@color/n6"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDeleteRouletteDlgDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vDeleteRouletteDlgDivider">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/error">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/delete_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

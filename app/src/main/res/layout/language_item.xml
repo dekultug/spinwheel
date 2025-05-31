@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clLanguageRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen_16"
+    android:layout_marginBottom="@dimen/dimen_10"
+    android:background="@drawable/shape_bg_black_light_corner_12">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivLanguage"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginVertical="@dimen/dimen_10"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImage"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:fontFamily="@font/regular"
+        android:paddingVertical="@dimen/dimen_18"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_text_size_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivLanguage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tieng viet" />
+
+    <ImageView
+        android:id="@+id/rbLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|end"
+        tools:src="@drawable/ic_radio_active"
+        android:layout_marginEnd="@dimen/dimen_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:checked="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

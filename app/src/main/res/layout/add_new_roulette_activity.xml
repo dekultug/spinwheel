@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAddEditNewRouletteHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_primary_bold"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAddEditNewRouletteClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_4"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@id/tvAddEditNewRouletteTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddEditNewRouletteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:fontFamily="@font/bold"
+            android:paddingTop="@dimen/dimen_20"
+            android:paddingBottom="@dimen/dimen_4"
+            android:text="@string/add_new_roulette_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_22"
+            app:layout_constraintBottom_toTopOf="@id/vAddNewAddEditNewRouletteSpace"
+            app:layout_constraintStart_toEndOf="@+id/ivAddEditNewRouletteClose"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vAddNewAddEditNewRouletteSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_34"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vAddEditNewRouletteDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginBottom="@dimen/dimen_14"
+        app:layout_constraintBottom_toBottomOf="@id/clAddEditNewRouletteHeader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_bg_n10_top_corner_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vAddEditNewRouletteDivider">
+
+        <com.amvfunny.dev.wheelist.presentaition.widget.scroll.LockableScrollView
+            android:id="@+id/svAddNewRoulette"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/dimen_40"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/tvAddEditNewRoulettePreview"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAddEditNewRouletteBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvAddEditNewRouletteNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/name_roulette_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_text_size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtAddEditNewRouletteName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/shape_bg_black_light_corner_12"
+                    android:fontFamily="@font/regular"
+                    android:gravity="start"
+                    android:hint="@string/name_roulette_hint"
+                    android:padding="@dimen/dimen_16"
+                    android:textColor="@color/white"
+                    android:maxLines="2"
+                    android:maxLength="30"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/dimen_text_size_16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/dimen_74"
+                    app:layout_constraintHeight_min="@dimen/dimen_72"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddEditNewRouletteNameTitle" />
+
+                <View
+                    android:id="@+id/vAddEditNewRouletteDividerFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_24"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtAddEditNewRouletteName" />
+
+                <TextView
+                    android:id="@+id/tvAddEditNewRouletteRepeatTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/repeat_roulette_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_text_size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vAddEditNewRouletteDividerFirst" />
+
+                <com.amvfunny.dev.wheelist.presentaition.widget.slider.SpinSliderView
+                    android:id="@+id/slAddEditNewRouletteRepeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_4"
+                    android:layout_marginTop="@dimen/dimen_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddEditNewRouletteRepeatTitle" />
+
+                <View
+                    android:id="@+id/vAddEditNewRouletteDividerSecond"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_24"
+                    android:background="@color/divider_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/slAddEditNewRouletteRepeat" />
+
+                <TextView
+                    android:id="@+id/tvAddEditNewRouletteOptionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:fontFamily="@font/regular"
+                    android:text="@string/option_roulette_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_text_size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vAddEditNewRouletteDividerSecond" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/dimen_16"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/shape_bg_black_light_corner_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_max="@dimen/dimen_200"
+                    app:layout_constraintHeight_min="@dimen/dimen_80"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddEditNewRouletteOptionTitle">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAddEditNewRouletteOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingTop="@dimen/dimen_16"
+                        tools:listitem="@layout/field_option_wheel_item" />
+
+                </FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.amvfunny.dev.wheelist.presentaition.widget.scroll.LockableScrollView>
+
+        <View
+            android:id="@+id/vAddEditNewRouletteDividerSpaceCenter"
+            android:layout_width="@dimen/dimen_1"
+            android:layout_height="@dimen/dimen_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddEditNewRoulettePreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginEnd="@dimen/dimen_4"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:background="@drawable/shape_gradient_m60_corner_12"
+            android:fontFamily="@font/bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingVertical="@dimen/dimen_12"
+            android:text="@string/preview_title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_16"
+            app:layout_constraintBottom_toTopOf="@id/rlAddEditNewRouletteAdmob"
+            app:layout_constraintEnd_toEndOf="@id/vAddEditNewRouletteDividerSpaceCenter"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAddEditNewRouletteSaveSpin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:layout_marginEnd="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:background="@drawable/shape_gradient_orange_primary_corner_12"
+            android:fontFamily="@font/bold"
+            android:paddingVertical="@dimen/dimen_12"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@string/save_spin_title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_16"
+            app:layout_constraintBottom_toTopOf="@+id/rlAddEditNewRouletteAdmob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vAddEditNewRouletteDividerSpaceCenter" />
+
+        <RelativeLayout
+            android:id="@+id/rlAddEditNewRouletteAdmob"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:background="@color/white">
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

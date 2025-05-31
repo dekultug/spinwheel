@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/flExitApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:background="@drawable/shape_white_corner_12">
+
+            <TextView
+                android:id="@+id/tvExitAppTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_22"
+                android:fontFamily="@font/bold"
+                android:text="@string/exit_app_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvExitAppContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:text="@string/exit_app_content"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExitAppTitle" />
+
+            <View
+                android:id="@+id/vExitAppDividerH"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:background="#3B3B3B"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExitAppContent" />
+
+            <View
+                android:id="@+id/vExitAppDividerV"
+                android:layout_width="@dimen/dimen_1"
+                android:layout_height="@dimen/dimen_36"
+                android:background="#3B3B3B"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vExitAppDividerH" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tvExitAppCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_14"
+                android:layout_marginEnd="@dimen/dimen_6"
+                app:cardCornerRadius="@dimen/dimen_16"
+                app:layout_constraintEnd_toEndOf="@id/vExitAppDividerV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vExitAppDividerH">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:paddingVertical="@dimen/dimen_10"
+                    android:text="@string/exit_app_confirm"
+                    android:textAlignment="center"
+                    android:textColor="@color/n6"
+                    android:textSize="@dimen/dimen_text_size_16" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tvExitAppStay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_6"
+                android:layout_marginEnd="@dimen/dimen_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="@dimen/dimen_16"
+                app:layout_constraintStart_toStartOf="@id/vExitAppDividerV"
+                app:layout_constraintTop_toBottomOf="@id/vExitAppDividerH">
+
+                <FrameLayout
+                    android:id="@+id/flExitAppCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingVertical="@dimen/dimen_10"
+                        app:cardCornerRadius="@dimen/dimen_16"
+                        android:text="@string/stay_app_confirm"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_text_size_16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/vExitAppDividerV"
+                        app:layout_constraintTop_toBottomOf="@id/vExitAppDividerH" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/vExitAppDividerV2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvExitAppStay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</layout>

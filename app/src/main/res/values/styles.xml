@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CornerImage8">
+        <item name="cornerSize">@dimen/dimen_8</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar</item>
+    </style>
+
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_full</item>
+        <item name="android:indeterminateDrawable">@drawable/ratingbar_full</item>
+        <item name="android:minHeight">13.4dp</item>
+        <item name="android:maxHeight">13.4dp</item>
+    </style>
+
+</resources>

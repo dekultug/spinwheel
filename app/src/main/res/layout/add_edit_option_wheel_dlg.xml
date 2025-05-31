@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/flAddEditOptionWheel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddEditOptionWheelDlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:background="@drawable/shape_white_corner_12">
+
+            <TextView
+                android:id="@+id/tvAddEditOptionWheelDlgTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:fontFamily="@font/bold"
+                android:text="@string/new_option_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAddEditOptionWheelDlgNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:fontFamily="@font/regular"
+                android:text="@string/name_roulette_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddEditOptionWheelDlgTitle" />
+
+            <EditText
+                android:id="@+id/edtAddEditOptionWheelDlgNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/shape_bg_white_stroke_n4_corner_12"
+                android:fontFamily="@font/regular"
+                android:hint="@string/name_roulette_hint"
+                android:maxLines="2"
+                android:maxLength="30"
+                android:paddingHorizontal="@dimen/dimen_12"
+                android:paddingVertical="@dimen/dimen_10"
+                android:textColor="@color/n8"
+                android:textColorHint="@color/n4"
+                android:textSize="@dimen/dimen_text_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddEditOptionWheelDlgNameTitle" />
+
+            <TextView
+                android:id="@+id/tvAddEditOptionWheelDlgColorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:fontFamily="@font/regular"
+                android:text="@string/color_title"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtAddEditOptionWheelDlgNameTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAddEditOptionWheelDlgColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_14"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddEditOptionWheelDlgColorTitle" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAddEditOptionWheelDlgColorCustom"
+                android:layout_width="@dimen/dimen_32"
+                android:layout_height="@dimen/dimen_32"
+                android:layout_marginVertical="@dimen/dimen_10"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/rvAddEditOptionWheelDlgColor"
+                app:layout_constraintTop_toBottomOf="@+id/rvAddEditOptionWheelDlgColor"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                tools:background="#F40000" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAddEditOptionWheelDlgColorCustomSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tick"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAddEditOptionWheelDlgColorCustom"
+                app:layout_constraintEnd_toEndOf="@+id/ivAddEditOptionWheelDlgColorCustom"
+                app:layout_constraintStart_toStartOf="@+id/ivAddEditOptionWheelDlgColorCustom"
+                app:layout_constraintTop_toTopOf="@+id/ivAddEditOptionWheelDlgColorCustom"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llAddEditOptionWheelDlgColorCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_24"
+                android:layout_marginTop="@dimen/dimen_10"
+                app:layout_constraintBottom_toTopOf="@+id/cvAddEditOptionWheelDlgCancel"
+                app:layout_constraintStart_toStartOf="@id/rvAddEditOptionWheelDlgColor"
+                app:layout_constraintTop_toBottomOf="@id/ivAddEditOptionWheelDlgColorCustom">
+
+                <ImageView
+                    android:id="@+id/ivAddEditOptionWheelDlgCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_4"
+                    android:fontFamily="@font/bold"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:text="@string/add_color_title"
+                    android:textColor="@color/orange_bold"
+                    android:textSize="@dimen/dimen_text_size_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/vAddEditOptionWheelDlgDivider"
+                android:layout_width="@dimen/dimen_1"
+                android:layout_height="@dimen/dimen_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddEditOptionWheelDlgCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_16"
+                android:layout_marginEnd="@dimen/dimen_4"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/vAddEditOptionWheelDlgDivider"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/cancel_title"
+                        android:textColor="@color/n6"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddEditOptionWheelDlgAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4"
+                android:layout_marginEnd="@dimen/dimen_16"
+                android:layout_marginBottom="@dimen/dimen_24"
+                app:cardCornerRadius="@dimen/dimen_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vAddEditOptionWheelDlgDivider">
+
+                <FrameLayout
+                    android:id="@+id/flAddEditOptionWheelDlgAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/orange_primary_bold">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/bold"
+                        android:paddingVertical="@dimen/dimen_12"
+                        android:text="@string/add_option_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dimen_text_size_16" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/flRateDlgRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dark_transparent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dimen_32"
+            android:background="@drawable/shape_white_corner_12">
+
+            <ImageView
+                android:id="@+id/ivRateTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:src="@drawable/bg_rate_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/n8"
+                android:textSize="@dimen/dimen_text_size_22"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivRateTop"
+                tools:text="Do you like the app?" />
+
+            <TextView
+                android:id="@+id/tvRateContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_4"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/n6"
+                android:textSize="@dimen/dimen_text_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRateTitle"
+                tools:text="Let us know your experience" />
+
+
+            <com.amvfunny.dev.wheelist.presentaition.widget.ratingbar.CustomRatingBar
+                android:id="@+id/rbRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRateContent"
+                app:maxStar="5"
+                app:padding="3dp"
+                app:starHeight="@dimen/dimen_30"
+                app:starWidth="@dimen/dimen_30"
+                app:currentStar="5" />
+
+            <TextView
+                android:id="@+id/tvRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_22"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:background="@drawable/shape_gradient_orange_primary_corner_12"
+                android:fontFamily="@font/bold"
+                android:paddingVertical="@dimen/dimen_12"
+                android:text="@string/rate_btn"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_text_size_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rbRate" />
+
+            <TextView
+                android:id="@+id/tvRateExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dimen_6"
+                android:fontFamily="@font/bold"
+                android:padding="@dimen/dimen_10"
+                android:text="@string/exit_title"
+                android:textSize="@dimen/dimen_text_size_16"
+                android:textColor="@color/n6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

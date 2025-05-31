@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension"/>
+        <attr name="rb_radius" format="dimension"/>
+        <attr name="rb_duration" format="integer"/>
+        <attr name="rb_rippleAmount" format="integer"/>
+        <attr name="rb_scale" format="float"/>
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0"/>
+            <enum name="strokeRipple" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RB">
+        <attr name="starWidth" format="dimension"/>
+        <attr name="starHeight" format="dimension"/>
+        <attr name="maxStar" format="integer"/>
+        <attr name="minStar" format="float"/>
+        <attr name="currentStar" format="float"/>
+        <attr name="padding" format="dimension"/>
+        <attr name="emptyStar" format="reference"/>
+        <attr name="fullStar" format="reference"/>
+        <attr name="halfStar" format="reference"/>
+        <attr name="canChange" format="boolean"/>
+    </declare-styleable>
+</resources>

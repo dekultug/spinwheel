@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clSplashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_update">
+
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="@dimen/dimen_300"
+        android:layout_height="@dimen/dimen_300"
+        android:layout_marginTop="@dimen/dimen_120"
+        android:src="@drawable/icon_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:fontFamily="@font/bold"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/dimen_16"
+        android:textSize="@dimen/dimen_text_size_28"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ivSplashLogo" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lavPreviewRouletteAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_24"
+        android:indeterminate="true"
+        app:indicatorColor="@color/white"
+        app:trackThickness="@dimen/dimen_8"
+        app:trackCornerRadius="@dimen/dimen_10"
+        app:layout_constraintBottom_toTopOf="@id/tvSplashWarningAdmob"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/black_10" />
+
+    <TextView
+        android:id="@+id/tvSplashWarningAdmob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:fontFamily="@font/regular"
+        android:text="@string/splash_warning_ads_tile"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_text_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

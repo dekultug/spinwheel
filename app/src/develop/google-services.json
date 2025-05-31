@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129910651844",
+    "project_id": "lucky-spin-wheel-ee077",
+    "storage_bucket": "lucky-spin-wheel-ee077.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129910651844:android:66eaf6f3fbe5b732938291",
+        "android_client_info": {
+          "package_name": "com.amvfunny.dev.wheelist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaxWr4ZhvdWrwp0ls8JbuYVmY5Zxa_fzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

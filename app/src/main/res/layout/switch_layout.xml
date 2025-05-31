@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/flSwitchRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dimen_46"
+    android:layout_height="@dimen/dimen_24"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_bg_gradient_stroke_n4_corner_40">
+
+    <View
+        android:id="@+id/vSwitch"
+        android:layout_width="@dimen/dimen_20"
+        android:layout_height="@dimen/dimen_20"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_2"
+        android:background="@drawable/shape_white_corner_12" />
+
+</FrameLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHomeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_primary_bold"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivGuidePlayBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_6"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_4"
+            android:src="@drawable/ic_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGuidePlayTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGuidePlayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:fontFamily="@font/bold"
+            android:paddingTop="@dimen/dimen_20"
+            android:paddingBottom="@dimen/dimen_4"
+            android:text="@string/guide_play_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_22"
+            app:layout_constraintBottom_toTopOf="@id/vHomeSpace"
+            app:layout_constraintStart_toEndOf="@id/ivGuidePlayBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvGuidePlaySkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:fontFamily="@font/bold"
+            android:paddingTop="@dimen/dimen_20"
+            android:paddingBottom="@dimen/dimen_4"
+            android:paddingHorizontal="@dimen/dimen_20"
+            android:text="@string/skip_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_22"
+            app:layout_constraintBottom_toTopOf="@id/vHomeSpace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vHomeSpace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_34"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/vHomeDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginBottom="@dimen/dimen_14"
+        app:layout_constraintBottom_toBottomOf="@id/clHomeHeader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_bg_n10_top_corner_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vHomeDivider">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/tvGuidePlayGotIt"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_32"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/guide_step_1_title"
+                        android:textColor="@color/orange_primary_bold"
+                        android:textSize="@dimen/dimen_text_size_20" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/guide_step_1_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:visibility="gone"
+                        android:src="@drawable/bg_guide_step1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_48"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/guide_step_2_title"
+                        android:textColor="@color/orange_primary_bold"
+                        android:textSize="@dimen/dimen_text_size_20" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/guide_step_2_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:src="@drawable/bg_guide_step2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_48"
+                    android:layout_marginBottom="@dimen/dimen_32"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/guide_step_3_title"
+                        android:textColor="@color/orange_primary_bold"
+                        android:textSize="@dimen/dimen_text_size_20" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_4"
+                        android:fontFamily="@font/regular"
+                        android:text="@string/guide_step_3_content"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_16"
+                        android:src="@drawable/bg_guide_step3" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvGuidePlayGotIt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:background="@drawable/shape_gradient_orange_primary_corner_12"
+            android:fontFamily="@font/bold"
+            android:paddingVertical="@dimen/dimen_14"
+            android:text="@string/got_it_title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_text_size_18"
+            app:layout_constraintBottom_toTopOf="@id/flGuidePlayAdmob" />
+
+        <FrameLayout
+            android:id="@+id/flGuidePlayAdmob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:background="@color/white">
+
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
