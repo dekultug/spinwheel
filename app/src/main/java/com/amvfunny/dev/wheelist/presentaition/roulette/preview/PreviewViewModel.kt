@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import rubikstudio.library.model.LuckyItem
+import java.util.Locale
 import java.util.Random
 import javax.inject.Inject
 
@@ -70,9 +71,9 @@ class PreviewViewModel @Inject constructor (
                     optionItem.content?.let {
                         if (it.length > 8) {
                             val sportName = optionNameLanguage?.substring(0, 7) + "..."
-                            luckyItem.secondaryText = sportName.toUpperCase()
+                            luckyItem.secondaryText = sportName.uppercase(Locale.getDefault())
                         } else {
-                            luckyItem.secondaryText = optionNameLanguage?.toUpperCase()
+                            luckyItem.secondaryText = optionNameLanguage?.uppercase(Locale.getDefault())
                         }
                     }
                     list.add(luckyItem)

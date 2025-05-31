@@ -60,11 +60,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -134,16 +134,14 @@ dependencies {
     implementation(libs.androidx.media3.exoplayer.dash)
     implementation(libs.androidx.media3.ui)
 
-    implementation ("com.google.android.gms:play-services-ads:23.1.0")
-    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
     implementation ("com.google.firebase:firebase-analytics-ktx")
-    implementation ("com.google.firebase:firebase-database")
-    implementation ("com.google.firebase:firebase-storage-ktx")
     implementation ("com.google.firebase:firebase-crashlytics")
     implementation ("com.google.firebase:firebase-messaging-ktx")
     implementation ("com.google.firebase:firebase-config:21.6.3")
-
-    implementation("com.google.android.play:review-ktx:2.0.1")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.24")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.9.24")
+    implementation("com.google.android.play:review-ktx:2.0.2")
     implementation("com.google.android.play:app-update-ktx:2.1.0")
     implementation ("net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2")
     // Timber

@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.nativead.NativeAd
 import com.amvfunny.dev.wheelist.R
 import com.amvfunny.dev.wheelist.base.common.extention.getAppColor
 import com.amvfunny.dev.wheelist.base.common.extention.getAppDimension

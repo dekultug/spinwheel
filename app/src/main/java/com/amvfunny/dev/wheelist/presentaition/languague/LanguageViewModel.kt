@@ -1,10 +1,8 @@
 package com.amvfunny.dev.wheelist.presentaition.languague
 
-import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.android.gms.ads.nativead.NativeAd
 import com.amvfunny.dev.wheelist.base.common.state.StateData
 import com.amvfunny.dev.wheelist.presentaition.SpinWheelPreferences
 import com.amvfunny.dev.wheelist.presentaition.languague.LanguageActivity.Companion.START_APP_KEY

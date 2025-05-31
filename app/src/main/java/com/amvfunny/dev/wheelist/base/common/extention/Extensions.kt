@@ -355,7 +355,7 @@ fun Activity.getStringResourceByName(aString: String?): String {
     val resources = Resources(this.assets, metrics, conf)
     val stringWithOutSpaces = aString?.replace(" ", "")
     val stringWithOut = stringWithOutSpaces?.replace("-", "")
-    val stirngTolowerCase = stringWithOut?.toLowerCase()
+    val stirngTolowerCase = stringWithOut?.lowercase(Locale.ROOT)
     //
     val packageName: String = this.packageName
     val resId: Int = resources.getIdentifier(stirngTolowerCase, "string", packageName)
