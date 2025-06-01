@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Lucky Spin Wheel - Random Choice</string>
+    <string name="app_name" translatable="false">Lucky Spin Wheel - Random Choice </string>
     <string name="splash_title_app">Lucky Spin Wheel - Random Choice</string>
     <string name="app_tile">Wheel Spinner</string>
     <string name="splash_warning_ads_tile">This action may include advertisements</string>

@@ -22,33 +22,24 @@ android {
         applicationId = "com.amvfunny.dev.wheelist"
         minSdk = 24
         targetSdk = 34
-        versionCode = 100
-        versionName = "1.0.0"
+        versionCode = 101
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         val formattedDate = SimpleDateFormat("MM.dd.yyyy", Locale.getDefault()).format(Date())
-        base.archivesName = "App289_v$versionName($versionCode)_$formattedDate"
+        base.archivesName = "AppWheel_v$versionName($versionCode)_$formattedDate"
     }
     flavorDimensions ("default")
-
-//    signingConfigs {
-//        create("release") {
-//            storeFile = file("D:\\tunglv\\keystorefile\\keystoreapp226.jks")
-//            storePassword = "123456"
-//            keyAlias = "key0"
-//            keyPassword = "123456"
-//        }
-//    }
 
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-//            signingConfig = signingConfigs.getByName("release")
         }
 
         debug {
