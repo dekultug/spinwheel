@@ -5,6 +5,7 @@ enum class LANGUAGE_TYPE(val value: String) {
     SPANISH("es"),
     FRENCH("fr"),
     HINDI("hi"),
+    VIETNAMESE("vi"),
     PORTUGUESE("pt");
 
     companion object {

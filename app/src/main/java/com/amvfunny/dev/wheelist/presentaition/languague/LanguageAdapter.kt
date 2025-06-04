@@ -114,6 +114,12 @@ class LanguageAdapter :
                     binding.tvLanguage.text =
                         getAppString(R.string.portuguese_title, binding.root.context)
                 }
+
+                LANGUAGE_TYPE.VIETNAMESE ->{
+                    binding.ivLanguage.loadImage(getAppDrawable(R.drawable.ic_language_por))
+                    binding.tvLanguage.text =
+                        getAppString(R.string.vietnameese_title, binding.root.context)
+                }
             }
         }
     }

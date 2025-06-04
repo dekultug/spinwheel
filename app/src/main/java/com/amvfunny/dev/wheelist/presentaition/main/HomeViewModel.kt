@@ -22,8 +22,8 @@ class HomeViewModel : ViewModel() {
             val list: MutableList<Any> = arrayListOf()
             list.add(HOME_TYPE.ROULETTE)
             list.add(HOME_TYPE.CHOOSER)
-            list.add(HOME_TYPE.HOMOGRAFT)
             list.add(HOME_TYPE.RANKING)
+            list.add(HOME_TYPE.HOMOGRAFT)
             _homeListState.value = StateData.Success(list)
         }
     }

@@ -45,6 +45,7 @@
     <string name="add_title">विकल्प जोड़ें</string>
     <string name="new_option_title">नया विकल्प</string>
     <string name="update_option_title">विकल्प संशोधित करें</string>
+    <string name="vietnameese_title">वियतनामी</string>
     <string name="color_title">रंग</string>
     <string name="cancel_title">वापस</string>
     <string name="add_option_title">विकल्प जोड़ें</string>
@@ -92,6 +93,7 @@
     <string name="hue_title">शेड</string>
     <string name="normal_title">मानक</string>
     <string name="slow_title">धीमा स्पिन</string>
+
     <string name="fast_title">तेज़ स्पिन</string>
     <string name="setting_roulette_title">स्पिनर सेटिंग्स</string>
     <string name="duration_title">स्पिन की अवधि</string>

@@ -93,6 +93,7 @@
     <string name="normal_title">Standard</string>
     <string name="slow_title">Tour Lent</string>
     <string name="fast_title">Tour Rapide</string>
+    <string name="vietnameese_title">Vietnamese</string>
     <string name="setting_roulette_title">Paramètres de la Roue</string>
     <string name="duration_title">Durée du Tour</string>
     <string name="speed_title">Vitesse du Tour</string>

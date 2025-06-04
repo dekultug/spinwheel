@@ -196,6 +196,11 @@ class SettingActivity : SpinWheelActivity<SettingActivityBinding>() {
                                 getAppString(R.string.portuguese_title, this@SettingActivity)
                         }
 
+                        LANGUAGE_TYPE.VIETNAMESE -> {
+                            binding.tvSettingLanguageContent.text =
+                                getAppString(R.string.vietnameese_title, this@SettingActivity)
+                        }
+
                         else -> {
                             binding.tvSettingLanguageContent.text =
                                 getAppString(R.string.en_title, this@SettingActivity)

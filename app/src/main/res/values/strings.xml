@@ -11,6 +11,7 @@
     <string name="arabic_title">Arabic</string>
     <string name="indonesian_title">Indonesian</string>
     <string name="portuguese_title">Portuguese</string>
+    <string name="vietnameese_title">Vietnamese</string>
     <string name="next_title">Continue</string>
     <string name="content_intro_first">The wheel spinner creates random choices for various scenarios.</string>
     <string name="title_intro_second">Random Selector</string>

@@ -90,6 +90,7 @@
     <string name="ask_more_option">Agrega al menos 2 opciones para girar la rueda</string>
     <string name="add_color_title">Elegir Color</string>
     <string name="hue_title">Tono</string>
+    <string name="vietnameese_title">Vietnamita</string>
     <string name="normal_title">Estándar</string>
     <string name="slow_title">Giro Lento</string>
     <string name="fast_title">Giro Rápido</string>

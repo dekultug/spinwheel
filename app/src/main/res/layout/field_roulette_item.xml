@@ -59,7 +59,7 @@
         android:layout_marginTop="@dimen/dimen_22"
         android:background="@drawable/shape_gradient_orange_primary_corner_12"
         android:fontFamily="@font/bold"
-        android:paddingHorizontal="@dimen/dimen_28"
+        android:paddingHorizontal="@dimen/dimen_12"
         android:paddingVertical="@dimen/dimen_6"
         android:text="@string/spin_title"
         android:textColor="@color/white"

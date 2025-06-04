@@ -10,6 +10,7 @@ class LanguageRepoImpl @Inject constructor(): ILanguageRepo {
     override fun getListLanguage(): List<LanguageDisplay> {
         val list: MutableList<LanguageDisplay> = arrayListOf()
 //        val currentLanguage = LANGUAGE_TYPE.getType(SpinWheelPreferences.valueCodeLanguage)
+        list.add(LanguageDisplay(type = LANGUAGE_TYPE.VIETNAMESE,false))
         list.add(LanguageDisplay(type = LANGUAGE_TYPE.ENGLISH, false))
         list.add(LanguageDisplay(type = LANGUAGE_TYPE.SPANISH, false))
         list.add(LanguageDisplay(type = LANGUAGE_TYPE.FRENCH,false))
