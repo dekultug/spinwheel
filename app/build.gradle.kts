@@ -16,12 +16,12 @@ plugins {
 
 android {
     namespace = "com.amvfunny.dev.wheelist"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.amvfunny.dev.wheelist"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 102
         versionName = "1.0.2"
 

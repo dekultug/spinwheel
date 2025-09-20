@@ -141,7 +141,7 @@ class SettingActivity : SpinWheelActivity<SettingActivityBinding>() {
         binding.clSettingPrivacy.setOnSafeClick {
             try {
                 val intent =
-                    Intent(Intent.ACTION_VIEW, Uri.parse("https://www.freeprivacypolicy.com/live/89fe3282-83da-40e7-b957-5b2e9fe25c64"))
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/document/d/1WVC7lW1MfQKzhqEP2sMtnGox0yrkwj7sFdKzEw_Pn6Y/edit?tab=t.0"))
                 startActivity(intent)
             } catch (e: Exception) {
                 e.printStackTrace()
